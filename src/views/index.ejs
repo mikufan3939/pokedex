@@ -4,14 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PokeDex</title>
+    <link rel="stylesheet" href="/styles/index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
-    <h1>PokeDex Unicesumar</h1>
-    <% results.forEach(pokemon => { %>
-    <div>
-        <p>Nome: <%= pokemon.name %></p>
-        <p>URL: <%= pokemon.url %></p>
-    </div>
-    <% }) %>
+    <header>
+        <a href="/" class="home-icon">
+            <i class="material-icons">home</i>
+        </a>
+        <h1>Pokedex</h1>
+    </header>
+    <% data.results.forEach(function(pokemon, index){ %>
+        <div class="pokemon-item">
+            <%if(((50*pageId)-50)+index+1 < 899){%>
+                <a href="/details/<%=pokemon.name%>" class="icon">          
+                    <img src=<%=`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/${((50*pageId)-50)+index+1}.png`%> alt="">
+                    <a href="/details/<%=pokemon.name%>" class="pokemon-link"><%= pokemon.name.charAt(0).toUpperCase()+pokemon.name.slice(1) %></a>
+                </a>
+            <%} else if(((50*pageId)-50)+index+1 <=1025){%>
+                <a href="/details/<%=pokemon.name%>" class="icon">          
+                    <img src=<%=`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${((50*pageId)-50)+index+1}.png`%> alt="">
+                    <a href="/details/<%=pokemon.name%>" class="pokemon-link"><%= pokemon.name.charAt(0).toUpperCase()+pokemon.name.slice(1) %></a>
+                </a>
+            <%}%>
+        </div>
+        <%})%>
+        <nav>
+            <%if (pageId==1){%>
+                <a class="active"><%=pageId%></a>
+                <a href="/pokedex/<%=pageId+1%>"><%=pageId+1%></a>
+                <a href="/pokedex/<%=pageId+2%>"><%=pageId+2%></a>
+                <a href="/pokedex/<%=pageId+3%>"><%=pageId+3%></a>
+            <%}else{%>
+                <a href="/pokedex/<%=pageId-1%>"><%=pageId-1%></a>
+                <a class="active"><%=pageId%></a>
+                <a href="/pokedex/<%=pageId+1%>"><%=pageId+1%></a>
+                <a href="/pokedex/<%=pageId+2%>"><%=pageId+2%></a>
+                <a href="/pokedex/<%=pageId+3%>"><%=pageId+3%></a>
+            <%}%>
+        </nav>
 </body>
 </html>

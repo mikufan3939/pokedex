@@ -1,0 +1,118 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Header styling */
+/* Header styling */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #b0e57c; /* Light green background */
+    padding: 10px;
+    border-bottom: 5px solid #9cdb56; /* Slightly darker green for the border */
+    position: relative; /* To position the icon absolutely */
+}
+
+header .home-icon {
+    position: absolute;
+    left: 20px; /* Adjust as needed */
+    top: 50%;
+    transform: translateY(-50%); /* Center vertically */
+    text-decoration: none;
+    color: #2a75bb; /* Icon color */
+    font-size: 2em; /* Icon size */
+}
+
+header .home-icon:hover {
+    color: #1a5a99; /* Darker color on hover */
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #2a75bb; /* Consistent text color */
+}
+
+
+/* Pokémon item styling */
+.pokemon-item {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    justify-content: space-between; /* Align text and icon */
+}
+
+/* Link styling */
+.pokemon-link {
+    font-size: 1.5em; /* Increase text size */
+    color: #2a75bb; /* Consistent link color */
+    text-decoration: none;
+    flex: 1; /* Allow the text to take available space */
+    margin-left: 20px; /* Space between icon and text */
+}
+
+.pokemon-link:hover {
+    text-decoration: underline;
+}
+
+/* Icon styling */
+.icon {
+    display: flex;
+    align-items: center; /* Center the icon vertically */
+    justify-content: center; /* Center the icon horizontally within its container */
+}
+
+.icon img {
+    width: 60px; /* Make the icons a bit bigger */
+    height: 60px; /* Make the icons a bit bigger */
+    border-radius: 50%; /* Circular icons */
+    box-shadow: none; /* Remove shadow to match the design */
+}
+
+/* Navigation styling */
+nav {
+    text-align: center;
+    margin-top: 20px;
+}
+
+nav a {
+    font-size: 1.2em;
+    color: #2a75bb; /* Consistent link color */
+    text-decoration: none;
+    padding: 10px;
+    margin: 0 5px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+nav a.active {
+    background-color: #2a75bb; /* Highlight color for the active page */
+    color: white;
+}
+
+nav a:hover {
+    background-color: #ddd; /* Light gray background on hover */
+}
+
+/* Responsive design adjustments */
+@media (max-width: 600px) {
+    .pokemon-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .icon {
+        margin-top: 10px;
+    }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes</title>
+    <link rel="stylesheet" href="/styles/pokemon.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+</head>
+<body>
+    <header>
+        <a href="/pokedex/<%=Math.ceil(data.id/50)%>" class="home-icon">
+            <i class="material-icons">home</i>
+        </a>
+        <h1>Pokedex</h1>
+    </header>
+    <div>
+        <h2><%= data.name %></h2>
+        <h4><%= speciesData.genera[7].genus%></h4>
+        <img src="<%= data.sprites.other["official-artwork"].front_default %>">
+    </div>
+    <div >
+        <h3>Types</h3>
+        <% data.types.forEach(function(type) { %>
+            <p class="typeBoxContainer typeBox type<%=type.type.name %>"><%= type.type.name %></p>
+        <% }) %>
+    </div>
+    <div>
+        <h3>Abilities</h3>
+    <ul class="abilityContainer">
+        <% data.abilities.forEach(function(ability) { %>
+            <li class="ability"><%= ability.ability.name %></li>
+        <% }) %>
+    </ul>
+    </div>
+    <div class="stats">
+        <h3>Stats</h3>
+            <p class="hp">HP: <%=data.stats[0].base_stat%></p>
+            <p class="atk">ATK: <%=data.stats[1].base_stat%></p>
+            <p class="def">DEF: <%=data.stats[2].base_stat%></p>
+            <p class="spatk">SP. ATK: <%=data.stats[3].base_stat%></p>
+            <p class="spdef">SP. DEF: <%=data.stats[4].base_stat%></p>
+            <p class="speed">SPEED: <%=data.stats[5].base_stat%></p>
+    </div>
+    <div class="evolutions">
+
+    </div>
+</body>
+</html>

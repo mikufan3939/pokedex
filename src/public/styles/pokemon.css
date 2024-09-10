@@ -1,0 +1,162 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Header styling */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #b0e57c; /* Light green background */
+    padding: 10px;
+    border-bottom: 5px solid #9cdb56; /* Slightly darker green for the border */
+    position: relative; /* To position the icon absolutely */
+}
+
+header .home-icon {
+    position: absolute;
+    left: 20px; /* Adjust as needed */
+    top: 50%;
+    transform: translateY(-50%); /* Center vertically */
+    text-decoration: none;
+    color: #2a75bb; /* Icon color */
+    font-size: 2em; /* Icon size */
+}
+
+header .home-icon:hover {
+    color: #1a5a99; /* Darker color on hover */
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #2a75bb; /* Consistent text color */
+}
+
+
+/* Pokemon details */
+div h2 {
+    font-size: 1.8em;
+    margin-top: 30px; /* Increased margin to create more space below the header */
+    margin-bottom: 0;
+    text-align: center;
+}
+
+div img {
+    display: block;
+    margin: 20px auto;
+    width: 200px; /* Adjusted sprite size */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Types */
+div > div {
+    text-align: center;
+}
+
+h3 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    color: #4b8b3b; /* Darker green for h3 elements */
+    border-bottom: 2px solid #4b8b3b; /* Matching border */
+    padding-bottom: 5px;
+}
+
+/* Type Boxes */
+.typeBoxContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.typeBox {
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 1.2em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Example Pokémon type colors with capitalized names */
+.typeBug { background-color: #a8b820; }
+.typeDark { background-color: #6f6f6f; }
+.typeDragon { background-color: #7038f8; }
+.typeElectric { background-color: #f8d030; color: black; }
+.typeFairy { background-color: #ee99ac; color: black; }
+.typeFighting { background-color: #c03028; }
+.typeFire { background-color: #f08030; }
+.typeFlying { background-color: #a890f0; color: black; }
+.typeGhost { background-color: #705898; }
+.typeGround { background-color: #915121; }
+.typeGrass { background-color: #78c850; color: black; }
+.typeIce { background-color: #98d8d8; color: black; }
+.typeNormal { background-color: #a8a878; color: black; }
+.typePoison { background-color: #a040a0; }
+.typePsychic { background-color: #f85888; color: black; }
+.typeRock { background-color: #b8a038; color: black; }
+.typeWater { background-color: #6890f0; }
+.typeSteel { background-color: #60a1b8;}
+
+/* Abilities */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+h3 + ul {
+    margin-top: 10px;
+}
+
+.abilityContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ability {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    background-color: #eee;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: 100%;
+    max-width: 300px; /* Control the maximum width for better layout */
+    text-align: center;
+}
+
+/* Stats section */
+.stats {
+    margin-top: 20px;
+}
+
+.stats p {
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Assigning colors to different stats */
+.hp { background-color: #ff5959; } /* HP */
+.atk { background-color: #f5ac78; } /* ATK */
+.def { background-color: #fae078; } /* DEF */
+.spatk { background-color: #9db7f5; } /* SP. ATK */
+.spdef { background-color: #a7db8d; } /* SP. DEF */
+.speed { background-color: #fa92b2; } /* SPEED */
+
+h4 {
+    font-size: 1.2em; /* Adjust size as needed */
+    text-align: center; /* Center the text */
+    color: #6a5acd; /* Soft purple color for the genus */
+    margin: 10px 0; /* Margin for spacing */
+    font-style: italic; /* Italicize the genus name for emphasis */
+}
